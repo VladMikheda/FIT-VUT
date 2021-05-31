@@ -1,0 +1,95 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+
+\usepackage{times}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+% \usepackage[IL2]{fontenc}
+
+\usepackage[unicode]{hyperref}
+%  \usepackage{hyperref}
+
+\newcommand{\czuv}[1]{\quotedblbase #1\textquotedblleft}
+
+%----------------------------------------------------------%
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \Huge
+        \textsc{Vysoké učení technické v~Brně\\
+               \huge Fakulta informačních technologií}\\
+               
+        \vspace{\stretch{0.382}}
+        \LARGE
+                Typografie a~publikování \,--\,4.~projekt\\
+                \Huge Bibliografické citace\\
+        \vspace{\stretch{0.618}}
+    \end{center}
+    {\Large \today \hfill
+                Mikheda Vladislav}
+\end{titlepage}
+
+
+\section{Co to je \LaTeX?}
+Ptali jste se sami sebe, o čem mysli druhé lidi, když říkáte \LaTeX?\\
+Jak můžeme přečíst zde \cite{LamportLeslie1994L:ad}, \LaTeX~je systém s různými funkcemi pro úpravy a psaní textu, který se často používá ve vědeckých kruzích. 
+
+\section{Způsoby pracovávaní s \LaTeX }
+
+Když jste se rozhodli, že k práci potřebujete \LaTeX , pravděpodobně jste přemýšleli o tom, co musíte udělat, abyste mohli začít.
+
+Existuje hodně programů pro práci s \LaTeX em, například LyX. Lyx má verze pro Linux, Windows a také MacOS, obsahuje hodné nástrojů potřebných pro skvělou práce viz \cite{KyselakAntonin}.
+
+Možná začnete se ptát, co musím udělat, pokud mám pouze kalkulačku, na které prohlížeč funguje jen pomalu, nepanikařte, a i pro vás existují řešeni.
+
+Online editory \LaTeX ~pro práci s dokumenty mají obrovské množství výhod: není třeba je instalovat, váš kód je k dispozici z jakéhokoli místa, kde je internet, existuje takové online editory například jak: Tex-On-Web, nebo editor pro sazbu matematických rovnic Latex Equation Editor viz \cite{SokolMiroslav2012OLe}.
+
+
+\section{Potřebuji li \LaTeX}
+Pravděpodobně musíte se zastavit, aby mohl se podívat na oblohu a zeptat se, na co ten \LaTeX ~vůbec potřebuji,  jaké jsou jeho výhody a nevýhody.\\
+Podíváme se na některý které jsou uvedeny zde \cite{VanDongenM.R.C.2012LaF}:
+\begin{itemize}
+\item Naučit se \LaTeX ~vám bude trvat dlouho. Ale pak vám to ušetří čas při psaní.
+\item Před zahájením práce je třeba připojit balíčky.
+\item V budoucnu však můžete použít své hotové šablony.
+\item Docela složité manipulace s obrázky
+\item \LaTeX ~má hodné balíků, což ztěžuje hledání toho, co potřebujete, ale díky balíčku existují velké možnosti
+\item Dokumenty formatu \LaTeX ~přijímá většina vědeckých konferencí a vydavatelů
+\end{itemize}
+
+
+Existují výhody a nevýhody, ale rychlost práce, kterou získáte, když se zvládnete naučit, všechny připravené šablony a možnost neovládat chování textu vám v budoucnu ušetři spoustu času při práci s dokumenty.
+
+\section{Možnosti \LaTeX u}
+Když jsme zjistili, co je to \LaTeX, jak jej můžeme používat a jaké jsou jeho výhody a nevýhody, pravděpodobně budu muset mluvit o některých jeho možnostech (možná to musilo byt řečeno dříve).
+\begin{itemize}
+\item Jedním z důvodů, proč byl \TeX ~vytvořen, je sada matematických vzorců, v \LaTeX u můžete psát všechny možné výrazy (rovnice, zlomky, integrály a další). Podrobné o matematických výrazů a jak s nimi pracovávat můžete dozvědět v článku \cite{Vojtech}.
+
+\item V \LaTeX u můžete pracovat s obrázky a také vytvářet vlastní vektorové obrázky 
+
+\item V \LaTeX u můžete vytvořit nejen textový dokument a také prezentace, tvorbě prezentace můžete se naučit tady \cite{Zelenka}
+
+\item \LaTeX ~má balíčky pro vytváření grafů funkcí s možností jejich další změny bez ztráty kvality viz \cite{Polasek}.
+
+\item V \LaTeX u můžete pracovat s citací, kterou velmi často používají v odborných textech, vice můžete dozvědět v článku \cite{DMartinek}.
+\end{itemize}
+
+\section{Závěr}
+Myslím, že výše uvedené informace stačí aby zkusit  \LaTeX, ale záleží jen na vás!
+
+\section{Něco na víc}
+Myslím, že výše chybělo několik zajímavých vývojových prací s \LaTeX em, proto je zde uvedu.
+
+MaxTract je nástroj, který převádí pdf s matematickými vzorce do \LaTeX u , což usnadňuje práci s matematickými dokumenty viz \cite{BakerJ.B}.
+
+Pro \LaTeX ~byl vyvinut balíček, který po kompilaci vytváří PDF, vzorce ve kterém jsou k dispozici pro čtečky obrazovky a Braillské řádky viz \cite{Armano}.
+
+
+\newpage
+\newpage
+\renewcommand{\refname}{Literatura}
+\bibliographystyle{czechiso}
+\bibliography{literatura}
+
+\end{document}

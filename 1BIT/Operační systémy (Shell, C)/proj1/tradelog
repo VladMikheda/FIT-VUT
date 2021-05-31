@@ -1,0 +1,341 @@
+#!/bin/sh
+
+#-----------------------------------------------------------------#
+#                                                                 #
+#   Autor: Mikheda Vladislav                                      #
+#   Login: xmikhe00                                               #
+#   Projekt's name: Úloha IOS (2021)                              #
+#                                                                 #
+#-----------------------------------------------------------------#
+
+export POSIXLY_CORRECT=yes
+export LC_NUMERIC=C
+#en_US.UTF-8
+
+
+#---------------------------------Arguments------------------------------#
+##########################################################################
+#------------------------------------------------------------------------#
+
+COMMAND=""
+TICKER=""
+FILTR_TICKER=""
+AFTER_DATETIME=""
+BEFOR_DATETIME="9999-12-31 23:59:59"
+WIDTH=""
+FILE_NAME=""
+FILE_NAMEGZ=""
+
+
+
+#---------------------------------Function-------------------------------#
+##########################################################################
+#------------------------------------------------------------------------#
+
+#Function return: Description of how to work with the program
+print_help()
+{
+  echo "POUŽITIE:"
+  echo ""
+  echo "                 tradelog [-h|--help]"
+  echo "                 tradelog [FILTERS..][COMMAND][LOG...]"
+  echo "FILTR:"
+  echo ""
+  echo "  -a[DATATIME]   jsou uvažovány pouze záznamy po tomto datu (bez tohoto data)
+                 DATETIME je formátu YYYY-MM-DD HH:MM:SS"
+  echo ""
+  echo "  -b[DATATIME]   jsou uvažovány pouze záznamy PŘED tímto datem (bez tohoto data)
+                 DATETIME je formátu YYYY-MM-DD HH:MM:SS"
+  echo ""
+  echo "  -t[TICKER]     jsou uvažovány pouze záznamy odpovídající danému tickeru"
+  echo ""
+  echo "  -w[WIDTH]      u výpisu grafů nastavuje jejich šířku, WIDTH musí být kladné celé číslo"
+  echo ""
+  echo "PŘÍKAZ:"
+  echo ""
+  echo "  list-tick      výpis seznamu vyskytujících se burzovních symbolů, tzv. 'tickerů'"
+  echo ""
+  echo "  profit         výpis celkového zisku z uzavřených pozic"
+  echo ""
+  echo "  pos            výpis hodnot aktuálně držených pozic seřazených sestupně dle hodnoty"
+  echo ""
+  echo "  last-price     výpis poslední známé ceny pro každý ticker"
+  echo ""
+  echo "  hist-ord       výpis histogramu počtu transakcí dle tickeru"
+  echo ""
+  echo "  graph-pos      výpis grafu hodnot držených pozic dle tickeru"
+
+  exit
+}
+
+
+#Function return: Ordered list of tickers
+list_tick() #udelano
+{
+  LIST_SORT=$(echo "$DATA_FILTERS" |sort -t';' -k 2,2 -u| awk -F';' '{print $2}')
+
+  echo "$LIST_SORT"
+}
+
+#Function subtracts the value of all purchased shares from all sold shares
+#Function return: Statement of total profit from closed positions
+profit() #Udelano
+{
+   PROFIT_SORT=$(echo "$DATA_FILTERS" | awk -F';' '{if($3 == "sell") print $4,$6; else print $4,-$6 }'\
+                                      | awk -F' ' '{sum+=$1*$2}END{printf("%.2f",sum)}')
+
+   echo "$PROFIT_SORT"
+}
+
+#Function return: Values of currently held positions sorted in descending order by value
+pos()
+{
+
+  #sorts the log alphabetically and changes the sell values to negative ones
+  POS_SORT_LIST=$(echo "$DATA_FILTERS" | sort -t ';' -r -k 2,2 | sort -s -t ';' -k 2,2 \
+                                       | awk -F';' '{if($3 == "sell") print $2,$4,-$6; else print $2,$4,$6 }')
+
+  #multiplies the number of shares by the price
+  POS_MULEIPLICATION=$(echo "$POS_SORT_LIST" | awk -F' '\
+                                    '(NR==1){old_name=$1;save=$2;printf ("%s" ";""%.2f\n", old_name,save*$3);next};
+                                     (old_name == $1){printf ("%s" ";""%.2f\n", old_name,save*$3);next};
+                                      {save=$2;old_name=$1;printf ("%s" ";""%.2f\n", old_name,save*$3)}')
+
+  #adds the values of the same tickers
+  POS_POS_LIST=$(echo "$POS_MULEIPLICATION" | awk -F';' \
+                                    '(NR==1){old_name=$1;save=$2;next};
+                                     (old_name == $1){save=save+$2;next};
+                                     {printf("%s"":""%.2f\n",old_name, save);old_name=$1;save=$2;next}
+                                     END{printf("%s"":""%.2f",old_name, save)}')
+
+  #finds the longest length among values
+  WORK_WIDTH_P=$(echo "$POS_POS_LIST" |awk -F':' '{print $2}'| awk -F':' '(NR==1){w=length;next};{if(w<length) w=length};END{print w+1}')
+
+  #sets the correct indentation
+  POS_PRINT=$(echo "$POS_POS_LIST" | awk -v width="$WORK_WIDTH_P" -F':' '{printf("%-10s"":""%*.2f\n",$1,width,$2)}')
+
+  #sort alphabetically and by cost reduction
+  POS_SORT=$(echo "$POS_PRINT" |  sort -s -t ';' -k 1,2 | sort -t':' -nrk 2)
+  echo "$POS_SORT"
+
+}
+
+#Function return: the last known price for each ticker
+last_price()
+{
+
+  #finds the longest length among values
+  WORK_WIDTH_L=$(echo "$DATA_FILTERS" |awk -F';' '{print $4}' | awk -F':' '(NR==1){w=length;next};{if(w<length) w=length};END{print w+1}')
+
+  #sorts by date and alphabet and removes duplicate tickers
+  LAST_PRICE_SORT=$(echo "$DATA_FILTERS" | sort -t ';' -r -k 2,2 | sort -s -t ';' -k 2,2 -u \
+                                         | awk -v width="$WORK_WIDTH_L" -F';' '{printf("%-10s"":""%*.2f\n",$2,width,$4)}')
+
+  echo "$LAST_PRICE_SORT"
+
+}
+
+#Function return: histogram report of the number of transactions according to the ticker
+hist_ord()
+{
+  #sorts the ticker alphabetically and counts the number of identical tickers
+  HIST_SORT=$(echo "$DATA_FILTERS" | sort -t ';' -r -k 2,2 | sort -s -t ';' -k 2,2 | awk -F';'\
+                                        '(NR==1){old_name=$2;save=1;next};
+                                        (old_name==$2){save=save + 1;next};
+                                        {printf("%-10s"":"" ",old_name); print save; old_name=$2;save=1;next}
+                                        END{printf("%-10s"":"" ",old_name); print save}')
+
+  #if no width is specified, it takes 1 ticker for 1 unit of width
+  #
+  #If the width is specified, it calculates the required number of parts for each ticker:
+  #                       it divides the largest value of the number of tickers by the width,
+  #                       then for each ticker it divides the values of the number of tickers by the received part
+  if [ -z "$WIDTH" ];
+    then
+      HIST_PRINT=$( echo "$HIST_SORT"| awk -v w="$WIDTH" -F ':' \
+        '{count=$2;printf("%-10s"":",$1);if(count > 0){printf(" ")};for(;count > 0;count--)printf("#");printf ("\n")}')
+    else
+       HIST_W=$( echo "$HIST_SORT"| sort -t ':' -rnk 2 | awk -v w="$WIDTH" -F ':' \
+          '(NR==1){del=$2/w;pr=$2/del;printf("%-10s"":",$1);if(int(pr) > 0){printf(" ")};
+           for(;int(pr) > 0;pr--)printf("#");printf ("\n");next}
+           {pr=$2/del;printf("%-10s"":",$1);if(int(pr) > 0){printf(" ")};
+           for(;int(pr) > 0;pr--)printf("#");printf ("\n")}')
+
+        HIST_PRINT=$( echo "$HIST_W" | sort -t ';' -r -k 1,2 | sort -s -t ';' -k 1,2  )
+  fi
+
+  echo "$HIST_PRINT"
+}
+
+#Function return: statement of the graph of values of held positions according to the ticker
+graph_pos()
+{
+  #uses function pos
+  GRAPH=$(pos)
+
+  #if the width is not specified, it takes 1000 as a unit of width,
+  #             then divides each value by 1000 to calculate the required number of plot parts
+  #
+  #If the width is specified, then the maximum value is divided by the width and
+  #              then for each ticker its value is divided by the calculated value
+  if [ -z "$WIDTH" ];
+    then
+      GRAPH_FOR=$( echo "$GRAPH" | awk  -F':' \
+                                  'BEGIN{w=1000}{pr=$2/w;printf("%-10s"":",$1);
+                                   if($2 < 0){pr = -pr; zn="!"}
+                                   else {zn="#"};if(int(pr) > 0){printf(" ")};
+                                   for(;int(pr) > 0;pr--) printf(zn)};{printf("\n")}')
+
+    else
+      MOD=$(echo "$GRAPH" | awk -F':' '{if($2 < 0) printf("%.2f\n",-$2);else printf("%.2f\n",$2)}' \
+                          | sort -t' ' -rnk 1 | awk '(NR==1){printf("%.2f\n",$1)}')
+
+      GRAPH_FOR=$( echo "$GRAPH" | awk -v w="$WIDTH" -v max="$MOD" -F':' \
+                                        'BEGIN{del=max/w}{pr=$2/del;printf("%-10s"":",$1);
+                                         if($2 < 0){pr = -pr; zn="!"}
+                                         else {zn="#"};if(int(pr) > 0){printf(" ")};
+                                         for(;int(pr) > 0;pr--) printf(zn)};{printf("\n")}')
+  fi
+
+  GRAPH_PRINT=$(echo "$GRAPH_FOR" | sort -t ';' -r -k 1,2 | sort -s -t ';' -k 1,2 )
+  echo "$GRAPH_PRINT"
+}
+
+
+#---------------------------------Main-----------------------------------#
+##########################################################################
+#------------------------------------------------------------------------#
+
+#reading the given arguments
+while [ -n "$1" ]
+do
+  case "$1" in
+    list-tick | profit | pos| last-price | hist-ord | graph-pos)
+      if [ -z "$COMMAND" ];
+        then
+          COMMAND="$1"
+        else
+          echo "Prikaz by měl být použit pouze jednou">&2
+          exit 1
+      fi
+      shift;;
+    --help) print_help
+      shift;;
+    -h) print_help
+      shift;;
+    -a)shift
+      case $1 in
+        [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]);;
+        *) echo "CHYBA: Není správný datatime format
+DATETIME je formátu YYYY-MM-DD HH:MM:SS." >&2
+           exit 1 ;; esac #funguje
+      AFTER_DATETIME="$1"
+      shift;;
+    -b)shift
+      case $1 in
+        [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" "[0-9][0-9]:[0-9][0-9]:[0-9][0-9]);;
+        *) echo "CHYBA: Není správný datatime format
+DATETIME je formátu YYYY-MM-DD HH:MM:SS." >&2
+           exit 1 ;; esac #funguje
+      BEFOR_DATETIME="$1"
+      shift;;
+    -t)shift
+      case $1 in
+        *[";"" "]*|"") echo "CHYBA: -t ntsmí obsahovat bílé znaky a znak středníku">&2
+         exit 2;;
+        *) ;; esac #funguje
+      if [ -z "$TICKER" ];
+       then TICKER="$1"
+       else  TICKER="$1|$TICKER"
+      fi
+      shift;;
+    -w)shift
+        if [ -z "$WIDTH" ];
+        then
+         case $1 in
+            *[!0-9]*|"")  echo "CHYBA: -w příznak musí být musí být kladné celé číslo">&2
+                          exit 2;;
+            *)  ;;
+         esac #funguje
+          if [ "$1" -gt 0 ];
+          then
+            WIDTH="$1"
+          else
+            echo "CHYBA: -w příznak musí být musí být kladné celé číslo">&2
+            exit 2
+          fi
+        else
+          echo "CHYBA: Příznak -w by měl být použit pouze jednou">&2
+          exit 2
+      fi
+      shift;;
+
+    *)if [ "${1##*.}" =  "gz" ];
+        then
+           if [ -r "$1" ];
+            then
+               FILE_NAMEGZ="$1 $FILE_NAMEGZ"
+            else
+              echo "CHYBA: Soubor \"$1\" neexistuje">&2
+              exit 1
+            fi
+        else
+          if [ -r "$1" ];
+            then
+               FILE_NAME="$1 $FILE_NAME"
+            else
+              echo "CHYBA: Soubor \"$1\" neexistuje nebo příkaz \"$1\" je nesprávný
+Pro zobrazení funkce nápovědy použijte --help nebo -h" >&2
+              exit 1
+          fi
+      fi
+      shift;;
+  esac
+done
+
+#combination for searching by ticker
+if [ -z "$TICKER" ];
+  then
+    FILTR_TICKER="cat "
+  else
+    FILTR_TICKER="grep -E '^.*;($TICKER);' "
+fi
+
+#combination for reading from a file
+READ_INPUTE=""
+if [ -z "$FILE_NAME" ];
+  then
+    if [ -z "$FILE_NAMEGZ" ];
+      then
+        READ_INPUTE="cat"
+      else
+        READ_INPUTE="gzip -d -c $FILE_NAMEGZ"
+
+    fi
+  else
+    if [ -z "$FILE_NAMEGZ" ];
+      then
+        READ_INPUTE="cat $FILE_NAME"
+      else
+        READ_INPUTE="gzip -d -c $FILE_NAMEGZ | cat $FILE_NAME -"
+
+    fi
+fi
+
+#reading from a file sorting by tickers and date
+READ_FILTERS="$READ_INPUTE | $FILTR_TICKER"
+DATA_FILTERS=$(eval "$READ_FILTERS" | awk -v dateA="$AFTER_DATETIME" -v dateB="$BEFOR_DATETIME" -F';' \
+                                                                      '{if( $1 > dateA && $1 < dateB) print $0}')
+#executing commands
+case "$COMMAND" in
+      list-tick) list_tick;;
+      profit) profit;;
+      pos) pos;;
+      last-price) last_price;;
+      hist-ord) hist_ord;;
+      graph-pos) graph_pos;;
+      *) echo "$DATA_FILTERS";;
+esac
+
+
+
