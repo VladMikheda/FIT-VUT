@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="lineMenuPanel" fx:id="linePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="139.0" stylesheets="@WindowStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuButton id="lineMenuButton" layoutX="1.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="137.0" text="Action" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <MenuItem fx:id="associationButton" mnemonicParsing="false" text="Association" />
+            <MenuItem fx:id="aggregationButton" mnemonicParsing="false" text="Aggregation" />
+            <MenuItem fx:id="compositionButton" mnemonicParsing="false" text="Composition" />
+            <MenuItem fx:id="inheritanceButton" mnemonicParsing="false" text="Inheritance" />
+            <MenuItem fx:id="realizationButton" mnemonicParsing="false" text="Realization" />
+            <MenuItem fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

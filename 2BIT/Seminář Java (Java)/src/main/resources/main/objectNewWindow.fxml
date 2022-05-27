@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="windowPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="324.0" stylesheets="@WindowStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="createObject" layoutY="61.0" mnemonicParsing="false" text="ADD OBJECT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+      <TextField fx:id="objectName" id="allField" layoutX="16.0" layoutY="14.0" prefHeight="36.0" prefWidth="292.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="windowPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="203.0" prefWidth="174.0" stylesheets="@WindowStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="windowLabel" layoutX="2.0" layoutY="23.0" prefHeight="23.0" prefWidth="170.0" text="The class name is repeated" />
+      <Button fx:id="itOk" layoutY="62.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="175.0" text="I'll fix it myself" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="itNotOk" layoutY="127.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="174.0" text="Fix it automatically" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

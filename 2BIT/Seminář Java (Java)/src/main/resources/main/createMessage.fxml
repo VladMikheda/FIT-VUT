@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="314.0" prefWidth="350.0" stylesheets="@WindowStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="windowLabel" layoutX="115.0" prefHeight="27.0" prefWidth="120.0" text="Create message" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="115.0" />
+      <Button fx:id="createMessage" layoutX="142.0" layoutY="175.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="205.0" text="CREATE MESSAGE" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="175.0" />
+      <TextField id="allField" fx:id="objectName" layoutX="17.0" layoutY="46.0" prefHeight="28.0" prefWidth="323.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0" />
+      <Label id="windowLabel" layoutX="15.0" layoutY="18.0" prefHeight="27.0" prefWidth="178.0" text="Recipient object name" />
+      <RadioButton fx:id="Synchronous" layoutX="17.0" layoutY="192.0" mnemonicParsing="false" text="Synchronous" />
+      <RadioButton fx:id="Asynchronous" layoutX="17.0" layoutY="221.0" mnemonicParsing="false" text="Asynchronous" />
+      <RadioButton fx:id="Delete" layoutX="17.0" layoutY="281.0" mnemonicParsing="false" text="Delete" />
+      <Label id="windowLabel" layoutX="15.0" layoutY="75.0" prefHeight="27.0" prefWidth="178.0" text="Message" />
+      <TextField id="allField" fx:id="message" layoutX="17.0" layoutY="103.0" prefHeight="28.0" prefWidth="323.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0" />
+      <RadioButton fx:id="Reply" layoutX="17.0" layoutY="252.0" mnemonicParsing="false" text="Reply" />
+      <Button fx:id="deleteObjectButton" layoutX="144.0" layoutY="244.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="205.0" text="DELETE OBJECT" AnchorPane.rightAnchor="0.5413106077025986" />
+      <TextField id="allField" fx:id="NumberOfConnect" layoutX="15.0" layoutY="143.0" prefHeight="28.0" prefWidth="45.0" />
+      <Label id="windowLabel" layoutX="68.0" layoutY="142.0" prefHeight="31.0" prefWidth="163.0" text="Number of connections" />
+   </children>
+</AnchorPane>

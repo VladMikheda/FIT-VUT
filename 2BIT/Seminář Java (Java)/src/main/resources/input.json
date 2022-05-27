@@ -1,0 +1,61 @@
+[
+  {
+    "class":
+    {
+      "name": "Person",
+      "attributes": [
+        {"accessModifiers": "public","id": "name"},
+        {"accessModifiers": "private","id": "age","type": "int"}
+      ],
+      "operations": [
+        {"accessModifiers": "public","id": "run()"},
+        {"accessModifiers": "private","id": "call()"}
+      ],
+      "height": 100,
+      "width": 150,
+      "xAxis": 4,
+      "yAxis": 20
+    }
+  },
+  {
+    "class":
+    {
+      "name": "Dog",
+      "attributes": [
+        {"accessModifiers": "public","id": "name","type": "string"},
+        {"accessModifiers": "protected","id": "breed","type": "string"}
+      ],
+
+      "height": 50,
+      "width": 55,
+      "xAxis": 400,
+      "yAxis": 50
+    }
+  },
+  {
+    "relation":
+    {
+      "name": "Have",
+      "start": "Person",
+      "end": "Dog",
+      "type": "association",
+      "startX": 260,
+      "startY" : 91,
+      "endX" : 400,
+      "endY" : 91
+    }
+  },
+  {
+    "relation":
+    {
+      "name": "Work",
+      "start": "Person",
+      "end": "Person",
+      "type": "association",
+      "startX": 260,
+      "startY" : 65,
+      "endX" : 400,
+      "endY" :65
+    }
+  }
+]

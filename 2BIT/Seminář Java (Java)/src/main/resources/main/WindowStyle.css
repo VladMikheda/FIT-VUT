@@ -1,0 +1,454 @@
+#leftBar {
+    -fx-background-color: rgb(15, 15, 15);
+}
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    /*-fx-opacity: 0;*/
+    -fx-background-color: rgb(15, 15, 15);
+}
+
+.root{
+    -fx-background-color: rgb(15, 15, 15);
+}
+
+.button{
+    -fx-background-color:rgb(48, 47, 46);
+    -fx-background-radius: 30 0 0 30;
+    -fx-padding:20px;
+    -fx-text-fill: rgb(150,150,150);
+}
+
+
+
+.button:hover {
+    -fx-background-color:rgb(54, 48, 119);
+    -fx-text-fill:rgb(211, 211, 211);
+    /* -fx-font-weight:bold;  */
+    -fx-border-radius: 30 0 0 30;
+    -fx-border-color: rgb(54, 48, 119);
+    /* -fx-border-weight: 2; */
+}
+
+.button:pressed {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-color:rgb(61, 84, 133);
+    -fx-border-radius: 30 0 0 30;
+}
+
+
+#topbuttom{
+   -fx-background-radius: 10 10 10 10;
+   -fx-pref-width: 200;
+   -fx-background-color:rgb(48, 47, 46);
+   /* -fx-background-radius: 10 10 10 10; */
+   /* -fx-text-fill:rgb(255, 255, 255); */
+}
+
+.tab-label{
+    -fx-text-fill: rgb(150,150,150);
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: rgb(255, 255, 255);
+    
+}
+
+#topbuttom:selected {
+    -fx-background-color: rgb(61, 84, 133);
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-radius: 0px;
+    -fx-border-width:  0 0 0 0;
+}
+
+
+
+#mainPane{
+     -fx-background-color: rgb(121, 121, 120);
+    -fx-background-image: url('./grid.png');
+    -fx-background-repeat: repeat; 
+    -fx-background-size: 40 40;
+    /* -fx-background-position: center center; */
+}
+#sequencePane{
+    -fx-background-color: rgb(64, 64, 64);
+    -fx-background-size: 40 40;
+    /* -fx-background-position: center center; */
+}
+#labelWarning{
+    -fx-background-color:rgb(48, 47, 46);
+    -fx-text-fill:rgb(255, 161, 110);
+}
+
+/********************Class*****************************/
+#classLabel{
+    -fx-background-image: url(./menu.png);
+    -fx-background-size: 10 10;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10 center;
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-alignment: center center;
+}
+
+#classBox{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 2 2 2 2;
+}
+
+
+#classChoice{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 0 1 0;
+    -fx-mark-color: rgb(61, 84, 133);
+    /*-fx-text-fill: rgb(255,255,255);*/
+    /*-fx-padding: 1 1 1 1;*/
+
+}
+
+#classChoice .context-menu{
+    -fx-background-color: rgb(48, 47, 46);
+}
+
+#classChoice .menu-item:focused{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+#classChoice .menu-item > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#classChoice .menu-item:focused > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#classChoice > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+.context-menu{
+    -fx-background-color: rgb(48, 47, 46);
+}
+
+.context-menu .menu-item:focused{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+.context-menu .menu-item > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+.context-menu .menu-item:focused > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+/*.context-menu > .label{*/
+/*    -fx-text-fill: rgb(255,255,255);*/
+/*}*/
+
+#classField2{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+
+#classField1{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 1 1 0;
+    -fx-text-fill: rgb(255,255,255);
+    /*-fx-font: system;*/
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+
+
+#className{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-alignment: center;
+    -fx-font-size: 10;
+    /*-fx-padding: 0 0 0 0;*/
+}
+
+#classNameWarning{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: rgb(255, 0, 0);
+    -fx-alignment: center;
+    -fx-font-size: 10;
+    /*-fx-padding: 0 0 0 0;*/
+}
+
+#classHbox{
+    /*-fx-background-color: rgb(48, 47, 46);*/
+    /*-fx-border-color: rgb(255,255,255);*/
+    /*-fx-border-width: 0 0 1 0;*/
+    /*-fx-text-fill: rgb(255,255,255);*/
+    -fx-alignment:center center ;
+}
+/*#classArg{*/
+/*    -fx-border-color: rgb(255,255,255);*/
+/*    -fx-border-width: 0 0 3 0;*/
+/*}*/
+
+
+#lineMenuPanel{
+    -fx-background-color: rgb(48, 47, 46);
+}
+
+#lineMenuButton{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-mark-color: rgb(61, 84, 133);
+}
+
+#lineMenuButton .menu-item:focused{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+#lineMenuButton .menu-item > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#lineMenuButton .menu-item:focused > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#lineMenuButton .menu-item:focused > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#lineMenuButton > .label{
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#relation{
+    -fx-stroke: rgb(255,255,255);
+    -fx-stroke-width: 3;
+    /*-fx-fill: rgb(255,255,255);*/
+
+}
+
+
+#objectBox{
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 2 2 2 2;
+}
+
+#objectLabel{
+    -fx-background-size: 10 10;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10 center;
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 1 1 1 1;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-alignment: center center;
+}
+
+#message{
+    -fx-stroke: rgb(255,255,255);
+    -fx-stroke-width: 4;
+    /*-fx-fill: rgb(255,255,255);*/
+}
+
+#lifeLine{
+    -fx-stroke: rgb(255,255,255);
+    -fx-stroke-width: 3;
+    -fx-stroke-dash-array: 2 12 12 2;
+    /*-fx-fill: rgb(255,255,255);*/
+}
+
+.scroll-pane{
+    -fx-background-color: rgb(48, 47, 46);
+}
+
+.scroll-pane .scroll-bar{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-padding: 0 2 0 0;
+
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: rgb(54, 48, 119);
+
+}
+
+
+#realizationLine{
+    -fx-stroke: rgb(255,255,255);
+    -fx-stroke-width: 3;
+    -fx-stroke-dash-array: 2 12 12 2;
+}
+
+#arrowInvisible{
+    -fx-opacity: 0;
+}
+
+#arrowAggregation{
+    -fx-border-color: black;
+    -fx-border: 2 2 2 2;
+    -fx-background-color: white;
+}
+
+#arrowComposition{
+    -fx-background-color: rgb(0,0,0);
+}
+
+#arrowInheritance{
+    -fx-background-image: url(./arr.png);
+    -fx-background-size: 12 12;
+    -fx-background-repeat: no-repeat;
+}
+
+#chunkVisible{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+#chunkTransparent{
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+
+
+#windowLabel{
+    /*-fx-border-color: rgb(255,255,255);*/
+    /*-fx-border-width: 0 0 1 0;*/
+    -fx-text-fill: rgb(255,255,255);
+    /*-fx-alignment: center center;*/
+}
+
+#windowPanel{
+    -fx-background-color: rgb(15, 15, 15);
+}
+
+
+#allArcane{
+    -fx-background-color: rgb(15, 15, 15);
+}
+
+#objectName{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-text-fill: rgb(255,255,255);
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+
+#allField{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-text-fill: rgb(255,255,255);
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+
+
+.radio-button .radio {
+    -fx-background-color: rgb(48, 47, 46);
+}
+.radio-button:selected .radio {
+    -fx-background-color: rgb(255,255,255);
+}
+#buttonUndo{
+    -fx-background-image: url(./undo.png);
+    -fx-background-size: 57 57;
+    -fx-background-color: rgb(0,0,0);
+    -fx-background-repeat: no-repeat;
+}
+
+#buttonUndo:hover {
+    -fx-background-color:rgb(0, 0, 0);
+    -fx-text-fill:rgb(211, 211, 211);
+    -fx-border-radius: 50%;
+    -fx-border-color: rgb(0,0,0);
+}
+#buttonUndo:pressed {
+    -fx-border-radius: 15px;
+    -fx-border-color: rgb(0,0,0);
+}
+
+
+#synchronAsyncronLine{
+    -fx-background-color: rgb(255, 255, 255);
+}
+
+#synchronArrow{
+    -fx-background-image: url(./synchron.png);
+    -fx-background-size: 12 12;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+#message{
+    -fx-text-fill: rgb(255,255,255);
+}
+#replayLine{
+    -fx-background-image: url(./replay.png);
+    -fx-background-size: 12 12;
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+}
+
+#sharpArrow{
+    -fx-background-image: url(./sharpArrow.png);
+    -fx-background-size: 16 16;
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+}
+
+
+#deleteArrow{
+    -fx-background-image: url(./arrowDelete.png);
+    -fx-background-size: 16 16;
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;
+}
+
+
+#notLode{
+    -fx-background-color: rgb(255,124,122);
+}
+
+#load{
+    -fx-background-color: target;
+}
+
+#number{
+    -fx-background-color: rgb(48, 47, 46);
+    -fx-text-fill: rgb(255,255,255);
+    /*-fx-font: system;*/
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+
+#m1{
+    -fx-background-color: rgb(54, 48, 119);
+    -fx-border-color: rgb(255,255,255);
+    -fx-border-width: 0 1 1 0;
+    -fx-text-fill: rgb(255,255,255);
+    /*-fx-font: system;*/
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 0;
+}
+#m2{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+#m2 .context-menu{
+    -fx-background-color: rgb(54, 48, 119);
+}
+
+/* 
+black rgb(15, 15, 15)
+*/

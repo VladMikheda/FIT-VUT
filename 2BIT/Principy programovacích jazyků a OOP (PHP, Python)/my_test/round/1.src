@@ -1,0 +1,4 @@
+.IPPcode22
+DEFVAR GF@a
+READ GF@a string
+WRITE GF@a

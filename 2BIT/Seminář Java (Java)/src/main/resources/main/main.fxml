@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1148.0" stylesheets="@WindowStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="leftBar" layoutY="-1.0" prefHeight="740.0" prefWidth="267.0" stylesheets="@WindowStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="475.0" prefWidth="268.0">
+               <children>
+                  <Pane prefHeight="30.0" prefWidth="268.0" />
+                  <Button fx:id="buttonSave" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="0.0" prefWidth="268.0" stylesheets="@WindowStyle.css" text="Save" textAlignment="CENTER" textFill="#969696">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="LEMON MILK Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="24.0" prefWidth="268.0" />
+                  <Button fx:id="buttonLoad" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="0.0" prefWidth="268.0" stylesheets="@WindowStyle.css" text="Load" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="LEMON MILK Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="24.0" prefWidth="268.0" />
+                  <Button fx:id="buttonAdd" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="0.0" prefWidth="270.0" stylesheets="@WindowStyle.css" text="Add new class" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="LEMON MILK Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="24.0" prefWidth="268.0" />
+                  <Button fx:id="buttonAddObject" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="310.0" stylesheets="@WindowStyle.css" text="Add Object" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font name="LEMON MILK Regular" size="16.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="24.0" prefWidth="268.0" />
+                  <HBox prefHeight="52.0" prefWidth="268.0">
+                     <children>
+                        <Pane prefHeight="53.0" prefWidth="24.0" />
+                        <RadioButton fx:id="choice1" mnemonicParsing="false" prefHeight="53.0" prefWidth="44.0" text="1" />
+                        <Pane prefHeight="53.0" prefWidth="24.0" />
+                        <RadioButton fx:id="choice2" mnemonicParsing="false" prefHeight="53.0" prefWidth="44.0" text="2" />
+                        <Pane prefHeight="53.0" prefWidth="24.0" />
+                        <RadioButton fx:id="choice3" mnemonicParsing="false" prefHeight="53.0" prefWidth="44.0" text="3" />
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="72.0" prefWidth="268.0">
+                     <children>
+                        <Button fx:id="buttonUndo" layoutX="190.0" layoutY="7.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="64.0" style="-fx-background-radius: 15px;" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <AnchorPane layoutY="491.0" prefHeight="222.0" prefWidth="268.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="489.5859818714451">
+               <children>
+                  <ScrollPane layoutX="14.0" layoutY="11.0" prefHeight="222.0" prefWidth="268.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <content>
+                        <Label id="labelWarning" fx:id="labelWarning" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="240.0" prefWidth="250.0" text="[OK]" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TabPane id="topbar" layoutX="245.0" prefHeight="733.0" prefWidth="913.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab id="topbuttom" text="CLASS DIAGRAM">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane id="mainPane" fx:id="mainPane" layoutX="8.0" layoutY="-1.0" prefHeight="702.0" prefWidth="920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="topbuttom" text="SEQUENCE DIAGRAM 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1919.0">
+                                 <children>
+                                  <Pane id="sequencePane" fx:id="sequencePane1" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                  </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="topbuttom" text="SEQUENCE DIAGRAM 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1919.0">
+                                 <children>
+                                    <Pane id="sequencePane" fx:id="sequencePane2" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="topbuttom" text="SEQUENCE DIAGRAM 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1919.0">
+                                 <children>
+                                    <Pane id="sequencePane" fx:id="sequencePane3" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

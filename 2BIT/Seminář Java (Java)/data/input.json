@@ -1,0 +1,97 @@
+[
+  {
+    "class": {
+      "yAxis": 0,
+      "xAxis": 0,
+      "name": "0"
+    }
+  },
+  {
+    "class": {
+      "yAxis": 131,
+      "xAxis": 38,
+      "operations": [
+        {
+          "id": "car",
+          "accessModifiers": "public"
+        }
+      ],
+      "name": "1"
+    }
+  },
+  {
+    "class": {
+      "yAxis": 279,
+      "xAxis": 209,
+      "operations": [
+        {
+          "id": "pop",
+          "accessModifiers": "public"
+        }
+      ],
+      "name": "2"
+    }
+  },
+  {
+    "sequence1": {
+      "message": [
+        {
+          "len": 104,
+          "name": "car",
+          "start": "1",
+          "x": 26,
+          "y": 16,
+          "end": "0",
+          "type": "reply"
+        },
+        {
+          "len": 104,
+          "name": "car",
+          "start": "0",
+          "x": 26,
+          "y": 0,
+          "end": "1",
+          "type": "sync"
+        },
+        {
+          "len": 104,
+          "name": "pop",
+          "start": "2",
+          "x": 26,
+          "y": 16,
+          "end": "1",
+          "type": "reply"
+        },
+        {
+          "len": 104,
+          "name": "pop",
+          "start": "1",
+          "x": 26,
+          "y": 32,
+          "end": "2",
+          "type": "sync"
+        }
+      ],
+      "participants": [
+        {
+          "name": "0",
+          "x": 0,
+          "boxHeight": 50,
+          "boxY": 10
+        },
+        {
+          "name": "1",
+          "x": 130,
+          "boxHeight": 50,
+          "boxY": 10
+        },
+        {
+          "name": "2",
+          "x": 260,
+          "boxHeight": 50,
+          "boxY": 10
+        }
+      ]
+    }
+  }
+]
