@@ -1,0 +1,234 @@
+Tue Apr 25 15:46:32 2023    profiling/output.prof
+
+         226 function calls (222 primitive calls) in 0.000 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:174(getwidth)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+       29    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:493(_parse)
+        1    0.000    0.000    0.000    0.000 {built-in method _sre.compile}
+        1    0.000    0.000    0.000    0.000 src/profiling.py:8(parseData)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:899(_create_pseudo_member_)
+        1    0.000    0.000    0.000    0.000 src/profiling.py:53(calculateProfiling)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/re.py:289(_compile)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:759(compile)
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:71(_compile)
+        1    0.000    0.000    0.000    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+        1    0.000    0.000    0.000    0.000 src/profiling.py:33(calculateExpression)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:978(_decompose)
+        1    0.000    0.000    0.000    0.000 src/profiling.py:27(calculateAverage)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:536(_compile_info)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:276(_optimize_charset)
+       29    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 're.Pattern' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:937(parse)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:997(<listcomp>)
+       11    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:56(pow)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:435(_parse_sub)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:938(__and__)
+        8    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:164(__getitem__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:631(__new__)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/types.py:171(__get__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/codecs.py:319(decode)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:233(__next)
+    25/23    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:249(_compile_charset)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:313(__call__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/re.py:223(split)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:598(_code)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:355(_escape)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:224(__init__)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:748(name)
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:286(tell)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:461(_get_literal_prefix)
+        1    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:921(fix_flags)
+        1    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:160(__len__)
+        1    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:889(_missing_)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:423(_simple)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:172(append)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:595(isstring)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:111(__init__)
+       11    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:492(_get_charset_prefix)
+       10    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:9(sum)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:76(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:254(get)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:36(div)
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x908780}
+        1    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:68(root)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:27(mul)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:249(match)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:453(_get_iscased)
+        2    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:81(groups)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:168(__setitem__)
+        1    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:18(sub)
+
+
+Tue Apr 25 15:46:39 2023    profiling/output.prof
+
+         5176 function calls (5172 primitive calls) in 0.002 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.001    0.001 src/profiling.py:8(parseData)
+     1001    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:56(pow)
+        1    0.000    0.000    0.000    0.000 {method 'split' of 're.Pattern' objects}
+        1    0.000    0.000    0.001    0.001 src/profiling.py:33(calculateExpression)
+        1    0.000    0.000    0.000    0.000 src/profiling.py:27(calculateAverage)
+     1001    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+     1019    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+     1019    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+     1000    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:9(sum)
+        1    0.000    0.000    0.002    0.002 src/profiling.py:53(calculateProfiling)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:493(_parse)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:759(compile)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:938(__and__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:598(_code)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/re.py:289(_compile)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:899(_create_pseudo_member_)
+        1    0.000    0.000    0.000    0.000 {method 'read' of '_io.TextIOWrapper' objects}
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:71(_compile)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:978(_decompose)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:276(_optimize_charset)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:937(parse)
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:174(getwidth)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/codecs.py:319(decode)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:997(<listcomp>)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:631(__new__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:536(_compile_info)
+    25/23    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:435(_parse_sub)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/re.py:223(split)
+        8    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:164(__getitem__)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/types.py:171(__get__)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:233(__next)
+        1    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        1    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:224(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:355(_escape)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:313(__call__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:249(_compile_charset)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:111(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:286(tell)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:76(__init__)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:748(name)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:889(_missing_)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:461(_get_literal_prefix)
+        1    0.000    0.000    0.000    0.000 {built-in method _sre.compile}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:172(append)
+        1    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:160(__len__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:921(fix_flags)
+        1    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:68(root)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:36(div)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:595(isstring)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:27(mul)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:492(_get_charset_prefix)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:423(_simple)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:18(sub)
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x908780}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:254(get)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:81(groups)
+        2    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:249(match)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:453(_get_iscased)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:168(__setitem__)
+        1    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+
+
+Tue Apr 25 15:46:51 2023    profiling/output.prof
+
+         5000176 function calls (5000172 primitive calls) in 1.283 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.356    0.356    0.741    0.741 src/profiling.py:8(parseData)
+        1    0.282    0.282    0.282    0.282 {method 'split' of 're.Pattern' objects}
+  1000001    0.153    0.000    0.192    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:56(pow)
+        1    0.145    0.145    0.337    0.337 src/profiling.py:33(calculateExpression)
+        1    0.131    0.131    0.187    0.187 src/profiling.py:27(calculateAverage)
+  1000000    0.056    0.000    0.056    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:9(sum)
+  1000001    0.052    0.000    0.052    0.000 {method 'strip' of 'str' objects}
+  1000019    0.051    0.000    0.051    0.000 {method 'append' of 'list' objects}
+  1000019    0.039    0.000    0.039    0.000 {built-in method builtins.isinstance}
+        1    0.012    0.012    1.283    1.283 src/profiling.py:53(calculateProfiling)
+        1    0.003    0.003    0.006    0.006 {method 'read' of '_io.TextIOWrapper' objects}
+        1    0.003    0.003    0.003    0.003 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:493(_parse)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/re.py:289(_compile)
+        1    0.000    0.000    0.003    0.003 /usr/lib/python3.8/codecs.py:319(decode)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:899(_create_pseudo_member_)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:759(compile)
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:71(_compile)
+    25/23    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      2/1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:174(getwidth)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:276(_optimize_charset)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:978(_decompose)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:937(parse)
+        1    0.000    0.000    0.282    0.282 /usr/lib/python3.8/re.py:223(split)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:536(_compile_info)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:997(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:938(__and__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:435(_parse_sub)
+        8    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:164(__getitem__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:631(__new__)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/types.py:171(__get__)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:233(__next)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:224(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:313(__call__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:598(_code)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:355(_escape)
+        1    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:286(tell)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:36(div)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:249(_compile_charset)
+        1    0.000    0.000    0.000    0.000 {built-in method _sre.compile}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:76(__init__)
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:27(mul)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:461(_get_literal_prefix)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:111(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:889(_missing_)
+        1    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:172(append)
+        9    0.000    0.000    0.000    0.000 /usr/lib/python3.8/enum.py:748(name)
+        1    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:68(root)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:160(__len__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:595(isstring)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:921(fix_flags)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:492(_get_charset_prefix)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:423(_simple)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 /home/xmarek74/IVS/proj2/IVS_tym_xkovac58/src/mathlib.py:18(sub)
+        1    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x908780}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:254(get)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:249(match)
+        2    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:81(groups)
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_parse.py:168(__setitem__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.8/sre_compile.py:453(_get_iscased)
+        1    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+
+

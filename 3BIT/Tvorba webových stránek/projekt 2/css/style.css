@@ -1,0 +1,1201 @@
+/*
+* Project: ITW 2023
+* File: style.css
+* Author: Vladislav Mikheda
+* Login: xmikhe00
+* Web: https://www.stud.fit.vutbr.cz/~xmikhe00/
+*/
+
+
+/* GLOBAL */
+
+/* for smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0B0C10;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #66FCF1;
+    padding: 0;
+    margin: 0;
+}
+
+header, main, footer{
+    padding: 0 10px 0 10px;
+}
+
+img{
+    color: #45A29E;
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+    color: #66FCF1;
+    font-size: 3vw;
+}
+
+h2::first-letter{
+    text-transform: uppercase;
+}
+
+p{
+    color: #C5C5C7;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+ }
+ 
+ 
+ a:visited{
+    color: black;
+ }
+
+section{
+    padding: 100px 0 0 0;
+}
+
+.section-content{
+    margin: 30px 0 0 0;
+}
+
+
+@media screen and (max-width: 850px){
+    h2{
+        font-size: 36px;
+    }
+}
+
+/* main-menu */
+
+/* to have the logo and menu on different sides of the screen */
+.header-line{
+    top: 0px;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 101;
+}
+
+/* adding a background to make it easier to see */
+@media screen and (max-width: 1300px){
+    .header-line{
+        background-color: #0B0C10;
+        opacity: .8;
+    }
+}
+
+.logo{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 102;
+}
+
+
+.logo svg{
+    width: 50px;
+    height: 50px;
+}
+
+#bgr-menu{
+    margin-right: 30px;
+    z-index: 102;
+}
+
+
+#bgr-menu-button{
+    width: 40px;
+    height: 50px;
+    position: relative;
+}
+
+#bgr-menu-button span{
+    left: 0px;
+    width: 40px;
+    height: 3px;
+    background-color: #66FCF1;
+    position: absolute;
+    transition: all .5s linear;
+}
+
+/* change the lines to look like a burger */
+#bgr-menu-button span:nth-child(1){
+    transform: translateY(+15px);
+}
+#bgr-menu-button span:nth-child(2){
+    transform: translateY(+25px);
+}
+
+#bgr-menu-button span:nth-child(3){
+    transform: translateY(+35px);
+}
+
+
+
+#main-menu{
+    position:absolute;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B0C10;
+    width: 100%;
+    top:-100%;
+    margin: 0 auto 0 auto;
+    height: 100%;
+    left: 0px;
+    z-index: 100;
+    transition: all .5s linear;
+}
+
+#main-menu nav ul li a{
+    color: #66FCF1;
+    font-size: 48px;
+}
+
+#main-menu nav ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#main-menu nav ul li:hover a{
+    animation: menu-anim 5s linear infinite;
+}
+
+#main-menu nav ul li{
+    list-style-type: none;
+}
+
+/* highlight when hovering over a menu item */
+@keyframes menu-anim {
+    0% { color: #45A29E; }
+    25% { color: #66fcf273; }
+    50% { color: #fff; }
+    75% { color: #66fcf273; }
+    100% { color: #45A29E; }
+}
+
+#header-menu.open #main-menu{
+    transform: translateY(100%);
+    position: fixed;
+}
+
+/* hidden logo when open main menu */
+#header-menu.open .logo{
+    visibility: hidden;
+}
+
+#header-menu.open #bgr-menu-button span{
+    background-color: #fff;  
+ }
+
+/* when the menu is open, the button to close the menu looks like a cross */
+#header-menu.open #bgr-menu-button span:nth-child(1){
+    transform: translateY(+25px) rotate(45deg);     
+ }
+
+ #header-menu.open #bgr-menu-button span:nth-child(2){
+    opacity: 0;
+ }
+  
+
+#header-menu.open #bgr-menu-button span:nth-child(3){
+    transform: translateY(+25px) rotate(-45deg);
+    
+}
+
+/* HEADER */
+header{
+    height: 100vh;
+}
+
+#header-content{
+    margin: 0 auto 0 auto;
+    max-width: 1300px;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "info photo";
+    grid-auto-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-info{
+    grid-area: info;
+    justify-self: center;
+
+}
+
+
+#header-info h2{
+    text-align: end;
+    font-size: 6.4vw;
+    text-transform: capitalize;
+    transition: all .5s linear
+}
+
+header:hover h2{
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 10px #66fcf273;
+}
+
+#header-info p{
+    display: block;
+    text-align: end;
+    font-size: 26px;
+}
+
+#header-image{
+    position: relative;
+    grid-area: photo;
+}
+
+#header-image svg{
+    width: 100%;
+    
+}
+
+ /* illumination of the button for rewinding to the next */
+@keyframes swipe {
+    0% { border-color: #C5C5C7; }
+    25% { border-color: #66fcf273; }
+    50% { border-color: #66FCF1; }
+    75% { border-color: #66fcf273; }
+    100% { border-color: #C5C5C7; }
+}
+
+#next-button{
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-right: solid;
+    border-bottom: solid;
+    transform: rotate(45deg);
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    text-transform: uppercase;
+    animation: swipe 5s linear infinite;
+
+}
+
+#next-button a{
+    width: 100%;
+    height: 100%;
+}
+
+/* for screens of smaller sizes, we will make the text above the picture so that it enters normally */
+@media screen and (max-width: 850px){
+
+    header{
+        display: grid;
+        align-items: center;
+    }
+
+    #header-content{
+        padding-top: 40px;
+        max-width: 850px;
+        display: grid;
+        height: fit-content;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #header-info{
+        grid-column: 1/3;
+    }
+
+    #header-image{
+        grid-column: 1/3;
+    }
+
+
+    #header-info{
+      z-index: 90;
+    }
+
+    #header-info h2{
+        text-align: center;
+        font-size: 48px;
+    }
+
+    #header-info p{
+        color: #fff;
+        text-align: center;
+    }
+
+    #header-image{
+        z-index: -1;
+        opacity: .5;
+    }
+    
+}
+
+/* ABOUT-ME */
+#about-me{
+    box-sizing: border-box;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+#about-me .section-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+/* let's make a frame for a photo to highlight it */
+#about-photo{
+    grid-column: 1/2;
+    grid-row: 1/1;
+    border-radius: 100% 30% 30% 100%;
+    overflow: hidden;
+    justify-self: end;
+    transition: all .5s linear;
+}
+
+#about-photo img{
+    width: 100%;
+    transition: all .5s linear;
+}
+
+#about-text{
+    justify-self: start;
+    grid-column: 2/3;
+    grid-row: 1/1;
+    padding: 0 0 0 30px;
+}
+
+/* when hovering over a section, change the frame and text colors for better contrast */
+#about-me .section-content:hover #about-photo{ 
+    border-radius: 50% 100% 100% 50%;
+}
+
+#about-me .section-content:hover #about-photo img{ 
+    scale: 1.3;
+}
+
+
+#about-text p:first-child{
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+#about-text p{
+    font-size: 16px;
+    transition: all .5s linear
+}
+
+#about-me .section-content:hover #about-text p:first-child{
+    color: #fff;
+}
+
+#about-me .section-content:hover #about-text p{
+    color: #45A29E;
+}
+
+
+#about-text p:not(:last-child){
+   padding-bottom: 10px;
+}  
+
+/* for smaller screens we center the photo and text the text we gray out in a round or
+oval frame depending on the screen size */
+@media screen and (max-width: 850px){
+
+    #about-me{
+        max-width: 850px;
+        margin-top: 100px;
+    }
+
+    #about-me .section-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 2fr;
+        align-items: flex-start;
+    }
+
+    #about-photo{
+        grid-column: 1/2;
+        grid-row: 1/1;
+        border-radius: 50%;
+        max-width: 300px;
+        max-height: 300px;
+        justify-self: center;
+    }
+
+    #about-text{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 0;
+        text-align: center;
+    }
+
+    #about-me .section-content:hover #about-photo{ 
+        border-radius: 50%;
+    }
+}
+
+/* GLOBAL FOR CARDS */
+.card:hover {
+    transform: scale(1.1);
+    background-color: #1F2833;
+}
+
+.card:hover .card-name h3{
+    color: #66FCF1;
+}
+
+.card-name h3{
+    color: #fff;
+    font-size: 25px;
+    padding: 0 0 10px 0;
+}
+
+.card-name h3::first-letter{
+    text-transform: capitalize;
+}
+
+.card{
+    border: #66FCF1 solid 1px;
+    padding: 20px;
+}
+
+.card .date{
+    color: #45A29E;
+}
+
+.card-content .date{
+    grid-area: date;
+    align-self: center;
+    justify-self: end;
+}
+
+.card-content .location{
+    grid-area: location;
+}
+
+.card-content .speciality{
+    grid-area: speciality;
+    color: #66FCF1;
+}
+
+.card:hover .date{
+    color: #C5C5C7;
+}
+
+
+/* LIVE-EXPERIANS */
+#live-experians{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+/* SKILLS */
+#skills .section-content{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-left: 27px;
+}
+
+#skills .section-content .skills-board .board-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(92px,1fr));
+}
+
+/* let's make phpp in capital letters */
+#skills .board-content .skill-card:nth-child(5) .card-name h4{
+    text-transform: uppercase;
+}
+
+#skills .section-content .skills-board{
+    margin: 0 0 20px 0;
+}
+
+
+.skill-card{
+    display: grid;
+    grid-template-rows: 2fr min-content;
+    justify-content: center;
+}
+
+.skill-card .card-name{
+    grid-row: 2/3;
+    padding: 10px 0 0 0;
+}
+
+.skill-card .card-content{
+    grid-row: 1/2;
+}
+
+ /* add transparency to the images which will be removed on hover */
+.skill-card .card-content img{
+    width: 100%;
+    opacity: .8;
+}
+
+
+.skill-card .card-name h4{
+    text-align: center;
+    text-transform: capitalize;
+    color: #45A29E ;
+    font-size: 22px;
+    padding: 0 10px 0 10px;
+}
+
+
+.skill-card:hover img{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.skill-card:hover .card-name h4{
+    color: #fff;}
+
+
+#skills .section-content .skills-board:nth-child(2) .board-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(92px,1fr));
+    justify-content: center;
+    align-items: end;
+}
+
+
+#skills .section-content .skills-board:nth-child(2) .skill-card .card-content img{
+    width: 80%;
+    opacity: .8;
+}
+
+#skills .section-content .skills-board:nth-child(2) .skill-card:hover .card-content img{
+    opacity: 1;
+}
+
+#educations{
+    margin-left: 50px;
+}
+
+
+#educations .section-content{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 27px 0 27px;
+}
+
+.education-card{
+    margin: 0 0 20px 0;
+}
+
+.education-card .card-content{
+    display: grid;
+    grid-template-areas: "speciality date"
+                         "location date";
+}
+
+.education-card:hover .card-content .speciality{
+    color: #fff;
+}
+
+.education-card:hover .card-content .location{
+    color: #45A29E;
+}
+
+/* changes for smaller screens
+all cards will be translated into 1 column for better readability
+card expansion animations will also be removed */
+@media screen and (max-width: 850px){
+
+    #live-experians{
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        max-width: 850px;
+
+    }
+
+    #skills{
+        margin-left: 0;
+    }
+
+    #skills .section-content{
+        padding: 0;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .skill-card{
+        padding: 10px;
+    }
+    .card:hover {
+        transform: scale(1);
+    }
+
+
+}
+
+
+@media screen and (max-width: 512px){
+
+    #live-experians {
+        max-width: 512px;
+    }
+
+    #skills .section-content .skills-board .board-content {
+        grid-template-columns: repeat(auto-fill, minmax(92px,auto));
+    }
+
+
+    #skills .section-content .skills-board:nth-child(2) .board-content {
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(92px,auto));
+    }
+
+}
+
+
+@media screen and (max-width: 314px){
+
+    #live-experians {
+        max-width: 314px;        
+    }
+    
+
+    #skills .section-name{
+        padding: 0;
+        
+    }
+
+    #skills .section-content{
+        grid-template-rows: repeat(2, min-content);
+        justify-content: center;
+    }
+
+
+    #skills .section-content .skills-board .board-content {
+        grid-template-columns: minmax(32px, 92px);
+        justify-content: center;
+  
+    }
+
+
+    #skills .section-content .skills-board:nth-child(2) .board-content {
+        display: grid;
+        grid-template-columns: minmax(32px, 92px);
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 850px){
+
+    #educations{
+        margin-left: 0;
+    }
+
+    #educations .section-content{
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 336px){
+
+    #educations{
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 250px){
+    .education-card .card-content{
+        display: grid;
+        grid-template-areas: "speciality"
+                             "location"
+                                "date";
+        
+    }
+
+    .card-content .date{
+        justify-self: center;
+    }
+}
+
+
+
+
+
+
+/* PROJECTS */
+#projects{
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}   
+
+#projects .section-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 27px 0 27px;
+}
+
+/* do not add padding to the last element */
+.card-project:not(:last-child){
+    margin: 0 30px 0 0;
+}
+
+.card-project .card-name{
+    display: grid;
+    grid-template-areas: "name code"
+                         "date code";
+}
+
+.card-project .date{
+    grid-area: date;
+}
+
+.card-project h3{
+    grid-area: name;
+}
+
+.card-project .link{
+    grid-area: code;
+    justify-self: end;
+}
+
+.card-project .description{
+    color: #C5C5C7;
+}
+
+.card-project .description{
+    padding: 0;
+    margin: 10px 0 0 20px;
+}
+
+.card-project .description li{
+    list-style-type: circle;
+}
+
+
+.card:hover .description{
+    color: #fff;
+}
+
+.card-name i{
+   color: #fff; 
+   font-size: 48px;
+   transition: all .5s linear;
+}
+
+.card:hover .card-name i{
+    animation: gradient-git 2s infinite linear alternate;
+}
+
+/* git icon rotate */
+.card-name i:hover{
+    transform: rotate(360deg);
+}
+
+/* flicker git icon animation */
+@keyframes  gradient-git {
+    0% {color: #fff;}
+    25% {color: #45A29E;}
+    50% {color:#66FCF1;}
+    75% {color: #45A29E;}
+    100% {color:#fff;}
+}
+
+/* for smaller screens */
+@media screen and (max-width: 720px){
+    #projects{
+        max-width: 720px;
+    } 
+
+    #projects .section-content{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .card-project:not(:last-child){
+        margin: 0 0 20px 0;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+    .card-name i{
+        padding-left: 10px;
+        font-size: 24px;
+    }
+}
+
+
+/* FREE-TIME */
+#free-time{
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+/* create a table in which cells will be separate hobbies */
+#free-time .section-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, fit-content);
+    padding: 0 27px 0 27px;
+}
+
+.hobby-card{
+    padding: 20px;
+    border: #66FCF1 solid 1px;
+    width: 150px;
+    height: 50px;
+}
+
+#free-time .section-content .hobby-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: start;
+    animation: gradient-border 3s infinite linear;
+    transition: all .5s linear;
+
+}
+
+/* make the edges blink so that it is clear that the cell 
+can be hovered over with the mouse */
+@keyframes  gradient-border{
+    0% {border-color: #66FCF1;}
+    25% {border-color: #45A29E;}
+    50% {border-color:#fff;}
+    75% {border-color: #45A29E;}
+    100% {border-color:#66FCF1;}
+}
+
+
+#free-time .section-content .card-content{
+    display: none;
+}
+
+#free-time .section-content .hobby-card:nth-child(1){
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+#free-time .section-content .hobby-card:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#free-time .section-content .hobby-card:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#free-time .section-content .hobby-card:nth-child(4){
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+/* changing the position of the picture depending on the number  */
+#free-time .section-content .hobby-card:nth-child(odd) .card-content img{
+    width: 20%;
+    float: left;
+}
+
+#free-time .section-content .hobby-card:nth-child(even) .card-content img{
+    width: 20%;
+    float: right;
+}
+
+/* when hovering, the cell expands into all columns and text appears */
+#free-time .section-content .hobby-card:hover{
+    grid-column: 1/5;
+    width:auto;
+    height: auto;
+    display: block;
+    background-color: #1F2833;
+    animation:none;
+}
+
+#free-time .section-content .hobby-card:hover .card-name h3{
+    color: #66FCF1;
+}
+
+#free-time .section-content .hobby-card:hover .card-content p{
+    color: #fff;
+}
+
+#free-time .section-content .hobby-card:hover .card-content {
+    display: block;
+}
+
+/* for smaller screens */
+@media screen and (max-width: 850px){
+    #free-time{
+        max-width: 850px;
+    }
+
+    #free-time .section-content{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, fit-content);
+        padding: 0;
+    }
+    #free-time .section-content .hobby-card{
+        margin: 0 0 20px 0;
+    }
+
+    #free-time .section-content .hobby-card:nth-child(1){
+        grid-column: 1/1;
+    }
+    
+    #free-time .section-content .hobby-card:nth-child(2){
+        grid-column: 1/1;
+    }
+    
+    #free-time .section-content .hobby-card:nth-child(3){
+        grid-column: 1/1;
+    }
+    
+    #free-time .section-content .hobby-card:nth-child(4){
+        grid-column: 1/1;
+    }
+    
+}
+
+/* FOOTER */
+footer section{
+    padding: 0;
+}
+
+footer{
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+    padding: 100px 0 0 0;
+}
+
+
+/* CONTACTS */
+#contacts .section-content{
+    display: grid;
+    grid-template-areas:"in phone mail";
+    padding: 0 27px 0 27px;
+}
+
+
+footer #contacts .section-content  p{
+    grid-area: t;
+}
+
+footer #contacts .section-content .block:nth-child(1){
+    display: block;
+    grid-area: in;
+    justify-self: start;
+}
+
+footer #contacts .section-content .block:nth-child(2){
+    display: block;
+    grid-area: phone;
+    justify-self: center;
+}
+
+footer #contacts .section-content .block:nth-child(3){
+    display: block;
+    grid-area: mail;
+    justify-self: end;
+}
+
+/* set the size of contact cards */
+.block{
+    display: block;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 60px 30px 60px 30px;
+    border: #66FCF1 solid 1px;
+    text-align: center;
+    transition: all .5s linear;
+
+}
+
+#contacts .section-name p{
+    font-size: 28px;
+}
+
+.block i{
+    display: block;
+    color: #fff;
+    font-size: 48px;
+}
+
+.block:hover{
+    transform: rotateX(180deg);
+    background-color: #1F2833;
+}
+/* when you hover over the cards, information will be displayed */
+#contacts .section-content .block:nth-child(1):hover span::after{
+    content: "vladmikheda";
+}
+
+#contacts  .section-content .block:nth-child(2):hover span::after{
+    content: "+420 --- --- ---";
+}
+
+#contacts  .section-content .block:nth-child(3):hover span::after{
+    content: "xmikhe00@vutbr.cz";
+}
+
+
+.block:hover span::after{
+    display: block;
+    transform: rotateX(180deg);
+    text-align: center;
+    font-size: 22px;
+    color: #66FCF1;
+}
+
+.block:hover i{
+    display: none;
+}
+
+/* for smaller screens */
+@media screen and (max-width: 850px){
+    #contacts .section-content{
+        grid-template-areas:"in"
+                            "phone" 
+                            "mail";
+        padding: 0;
+    }
+
+    footer{
+        max-width: 850px;
+    }
+
+    footer #contacts .section-content .block{
+        margin: 0 0 20px 0;
+    }
+    footer #contacts .section-content .block:nth-child(1){
+        justify-self: center;
+    }
+    
+    footer #contacts .section-content .block:nth-child(2){
+        justify-self: center;
+    }
+    
+    footer #contacts .section-content .block:nth-child(3){
+        justify-self: center;
+    }
+
+
+}
+
+
+@media screen and (max-width: 320px){
+    #contacts .section-name p{
+        font-size: 20px;
+    }
+
+    .block{
+        min-width: 180px;
+        padding: 5px;
+    }
+
+
+}
+
+/* CAPITATES */
+#copirate{
+    margin: 30px 0 0 0;
+    border-top:  #C5C5C7 solid 1px;
+    display: grid;
+    /* grid-template-areas: "cop all FIT author"; */
+    grid-template-columns: max-content max-content max-content 1fr;
+}
+
+#copirate h3{
+    padding: 10px 10px 0 10px;
+}
+
+#copirate span{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    color: #66FCF1;
+    padding: 10px 10px 0 10px;
+    /* font-size: ; */
+}
+
+#copirate h3:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 3/4;
+    color: #66FCF1;
+}
+
+#copirate h3:nth-child(2){
+    grid-row: 1/2;
+    grid-column: 2/3;
+    color: #66FCF1;
+    justify-self: start;
+}
+
+#copirate h3:nth-child(3){
+    grid-row: 1/2;
+    grid-column: 4/5;
+    color: #66FCF1;
+    justify-self: right;
+}
+
+/* for smaller screens */
+@media screen and (max-width: 700px){
+    #copirate{
+        margin: 0;
+        padding: 0 10px 0 10px;
+        /* grid-template-columns: 1fr; */
+        grid-template-columns: max-content max-content max-content;
+        justify-content: center;
+    }
+    
+    #copirate h3:nth-child(3){
+        grid-row: 2/3;
+        grid-column: 1/4;
+        justify-self: left;
+    }
+
+}
+
+
+@media screen and (max-width: 340px){
+
+    #copirate h3{
+      font-size: 5vw;
+    }
+    #copirate i{
+        font-size: 5vw;
+    }
+    #copirate span{
+        padding: 1vw 0 0 1vw;
+    }
+    #copirate h3{
+        padding: 1vw 0 0 1vw;
+    }
+
+}
+
+
+@media screen and (max-width: 270px){
+    #copirate i{
+        font-size: 7vw;
+    }
+}

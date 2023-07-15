@@ -1,0 +1,6 @@
+#1
+https://xkcd.com/atom.xml
+#2
+http://www.theregister.com/headlines.atom
+#3
+https://en.wikipedia.org/w/api.php?hidebots=1&days=7&limit=50&hidewikidata=1&action=feedrecentchanges&feedformat=atom

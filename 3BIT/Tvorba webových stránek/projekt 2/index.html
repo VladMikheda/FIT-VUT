@@ -1,0 +1,344 @@
+<!--
+ Project: ITW 2023
+ File: index.html
+ Author: Vladislav Mikheda
+ Login: xmikhe00
+ Web: https://www.stud.fit.vutbr.cz/~xmikhe00/
+ -->
+
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>VladislavMikheda</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("bgr-menu").addEventListener("click", () => {
+                    document.getElementById("header-menu").classList.toggle("open")
+                })
+
+                const menu_item = Array.from(document.getElementsByClassName('menu-item'));
+                menu_item.forEach(item => {
+                    item.addEventListener('click', () => {
+
+                        document.getElementById("header-menu").classList.toggle("open")
+                    });
+                });
+
+            })
+        </script>
+    </head>
+
+    <body>
+        <div id="header-menu">
+            <div class="header-line">
+                <a href="#" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 170 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M31.002639,102.37467h22.691292l45.184697,45.184697l43.535621-43.535621h25.791556L101.48417,170.745382L31.002639,102.37467Z" transform="translate(-26.21372-70.745382)" fill="none" stroke="#45a29e" stroke-width="3"/><path d="M192.480211,102.37467v68.370714h17.941953v-48.845648l27.869393,27.869393l27.440632-27.440632v48.416887h18.568601v-68.370712h-18.997364l-26.121371,26.121371-25.329816-25.329816-21.372028-.791557Z" transform="translate(-119.089709-70.745384)" fill="none" stroke="#66fcf1" stroke-width="3"/></svg>
+                </a>
+                <div id="bgr-menu">
+                    <div id="bgr-menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div id="main-menu">
+                <nav>
+                    <ul>
+                        <li><a class="menu-item" href="#">Start</a></li>
+                        <li><a class="menu-item" href="#about-me">About</a></li>
+                        <li><a class="menu-item" href="#skills">Skills</a></li>
+                        <li><a class="menu-item" href="#educations">Educations</a></li>
+                        <li><a class="menu-item" href="#projects">Projects</a></li>
+                        <li><a class="menu-item" href="#free-time">Hobby</a></li>
+                        <li><a class="menu-item" href="#contacts">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <header>
+            <div id="header-content">
+                <div id="header-info">
+                        <a href="https://www.stud.fit.vutbr.cz/~xmikhe00/"><h2>vladislav mikheda</h2></a>
+                        <p>Looking for an experienced programmer?</p>
+                        <p>I am a programmer who loves to create new solutions. I also have some experience with different programming languages and platforms. I am sure that I can cope with any task, even with your friend. Look at my portfolio and decide for yourself whether I suit you or not.</p>
+                        <a href="#about-me"><span id="next-button"></span></a>
+                    </div>
+                <div id="header-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><polygon points="0,-204.177315 176.822742,102.088657 -176.822742,102.088657 0,-204.177315" transform="matrix(.999863-.016522 0.016522 0.999863 214.420949 311.723377)" fill="#1f2833" stroke="#1f2833"/><polygon points="0,-204.177315 176.822742,102.088657 -176.822742,102.088657 0,-204.177315" transform="matrix(.999863-.016522 0.016522 0.999863 426.806639 427.651458)" fill="#1f2833" stroke="#1f2833"/><polygon points="0,-204.177315 176.822742,102.088657 -176.822742,102.088657 0,-204.177315" transform="matrix(.999863-.016522 0.016522 0.999863 305.80475 345.118734)" fill="#66fcf1" stroke="#66fcf1"/><path d="M255.145119,163.588391L130.692897,357.783641" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><path d="M85.224274,464.379947l235.356201-4.221636" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><path d="M527.440633,460.158311L430.343008,300" transform="translate(.000001 0.000001)" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><path d="M468.337731,291.159834L355.408971,125.593668" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><path d="M181.266491,220.580475L300,45.382586" transform="translate(.000001 0)" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><path d="M307.491502,499.208443l256.888445-5.277045" transform="translate(.000001 0)" fill="#66fcf1" stroke="#66fcf1" stroke-width="1.2"/><polygon points="0,-31.679856 27.435559,15.839927 -27.435559,15.839927 0,-31.679856" transform="matrix(.999877-.0157 0.0157 0.999877 170.712395 288.126652)" fill="#45a29e" stroke="#45a29e"/><polygon points="0,-31.679856 27.435559,15.839927 -27.435559,15.839927 0,-31.679856" transform="matrix(.999877-.0157 0.0157 0.999877 378.407912 170.154453)" fill="#45a29e" stroke="#45a29e"/><polygon points="0,-31.679856 27.435559,15.839927 -27.435559,15.839927 0,-31.679856" transform="matrix(.999877-.0157 0.0157 0.999877 393.403694 496.486649)" fill="#45a29e" stroke="#45a29e"/></svg>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="about-me">
+                <div class="section-name">
+                    <h2>about me:</h2>
+                </div>
+                <div class="section-content">
+                    <div id="about-photo">
+                        <img src="img/photo-about.webp" alt="my-photo">
+                    </div>
+                    <div id="about-text">
+                        <p>I am a developer with little experience. I work on a variety of projects to create high performance and feature rich software and services that run across multiple platforms and devices.</p>
+                        <p>I also know well several frameworks that include the web, but if you need, for example, a website, then I can write it manually using standard solutions.</p>
+                        <p>Also, when solving various problems, I can use non-standard solutions that can help optimize the program. None of my decisions will have a bad effect on the final product.</p>
+                        <p>I also try to constantly develop in the field of programming by reading literature and watching conferences on various topics.</p>                 
+                    </div>
+                </div>  
+            </section>
+            <section id="live-experians">
+                <section id="skills">
+                    <div class="section-name">
+                        <h2>my skills:</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="skills-board  card">
+                            <div class="card-name">
+                                <h3>language</h3>
+                            </div>
+                            <div class="board-content">
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>java</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/java.png" alt="java">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>c</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/c.png" alt="C">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>c++</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/C++.png" alt="C++">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>python</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/python.png" alt="python">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>php</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/php.png" alt="php">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-board  card">
+                            <div class="card-name">
+                                <h3>technologies</h3>
+                            </div>
+                            <div class="board-content">
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>git</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/git.png" alt="git">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>docker</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/docker.png" alt="docker">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>MySQL</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/mysql.png" alt="mySQL">
+                                    </div>
+                                </div>
+                                <div class="skill-card">
+                                    <div class="card-name">
+                                        <h4>OracleDB</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="img/oracle.png" alt="oracleDB">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="educations">
+                    <div class="section-name">
+                        <h2>education:</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="education-card  card">
+                            <div class="card-name">
+                                <h3>The North Kazakhstan higher medical college</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="date">09.2016 - 06.2019</p>
+                                <p class="speciality">Nursing</p>
+                                <p class="location">Petropavlovsk, Kazakhstan</p>
+                            </div>
+                        </div>
+                        <div class="education-card  card">
+                            <div class="card-name">
+                                <h3>Brno University of Technology</h3>
+                            </div>
+                            <div class="card-content">
+                                <p class="date">09.2020 - now</p>
+                                <p class="speciality">Faculty of Information Technologies</p>
+                                <p class="location">Brno, Czech Republic</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="projects">
+                <div class="section-name">
+                    <h2>projects:</h2>
+                </div>
+                <div class="section-content">
+                    <div class="card-project  card">
+                        <div class="card-name">
+                            <h3>Hospital database system</h3>
+                            <div class="link">
+                                <a href="https://github.com/VladMikheda/IDS">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <p class="date">2022</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="description">
+                                <li>Projecting and design of the hospital's database system</li>
+                                <li>Organization of team cooperation</li>
+                                <li>Optimization and acceleration of queries using an index</li>
+                                <li>Automation of data change processes in the database using</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-project  card">
+                        <div class="card-name">
+                            <h3>Packet sniffer</h3>
+                            <div class="link">
+                                <a href="https://github.com/VladMikheda/IPK_project2">
+                                   <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <p class="date">2022</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="description">
+                                <li>Capturing and filtering packets using the "Packet Capture" library</li>
+                                <li>Working with packets and parsing to output information about captured packets to the screen</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-project  card">
+                        <div class="card-name">
+                            <h3>Code parser and interpreter</h3>
+                            <div class="link">
+                                <a href="https://github.com/VladMikheda/IPP">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <p class="date">2022</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="description">
+                                <li>File parsing and conversion to XML format</li>
+                                <li>Parsing XML files</li>
+                                <li>Code interpretation</li>
+                                <li>Automatic testing using a written script</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+           </section>
+           <section id="free-time">
+            <div class="section-name">
+                <h2>hobby:</h2>
+            </div>
+            <div class="section-content">
+                <div class="hobby-card">
+                    <div class="card-name">
+                        <h3>Gitar</h3>
+                    </div>
+                    <div class="card-content">
+                        <img src="img/gitar.png" alt="gitar">
+                        <p>I am an aspiring guitarist with an interest in learning how to play the guitar. Although I don't have much experience in this field, I try to constantly improve my skills and learn something new. Maybe when I can play any songs.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="card-name">
+                        <h3>Auto</h3>
+                    </div>
+                    <div class="card-content">
+                        <img src="img/auto.png" alt="auto">
+                        <p>I am a car and have experience in car repair and maintenance. I know how the engine, cooling system, electrical and other important components of cars work. I like how not only to drive but also to repair cars. Thus, I can not overpay for service maintenance and also acquire skills that will come in handy in life.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="card-name">
+                        <h3>Coffee</h3>
+                    </div>
+                    <div class="card-content">
+                        <img src="img/coffee.png" alt="coffee">
+                        <p>I'm an avid coffee drinker, besides just drinking coffee I also know quite a bit about different types of coffee and how to make them. I have experience with various coffee brewing methods. Most of all I prefer filtered coffee. Coffee is what I start every day with.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="card-name">
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="card-content">
+                        <img src="img/computer.png" alt="programming">
+                        <p>I am passionate about programming and have experience developing projects in programming languages such as Python, Java and C++. I am constantly learning new technologies and programming languages to expand my knowledge and skills. In addition, I also work on my own projects in my spare time. My passion for programming makes me look for new approaches to solving various problems.
+                            I also learn JavaScript, HTML and CSS. I'm also trying to connect web design and backend to keep up with current market demands.</p>
+                    </div>
+                </div>
+            </div>
+           </section>
+        </main>
+        <footer>
+            <section id="contacts">
+                <div class="section-name"> 
+                    <h2>contact:</h2>
+                    <p>Feel free to text me or call</p>
+
+                </div>
+                <div class="section-content">
+                    <a class="block" href="https://www.linkedin.com/in/vladmikheda/"><span class="linkedin"><i class="fa fa-linkedin"></i></span></a>
+                    <a class="block"><span class="phone"><i class="fa fa-mobile-phone"></i></span></a>
+                    <a class="block" href="mailto:xmikhe00@vutbr.cz"><span class="mail"><i class="fa fa-envelope"></i></span></a>
+                </div>
+            </section>
+            <section id="copirate">
+                <h3>FIT VUT</h3>
+                <h3>2023, All rights reserved</h3>
+                <h3>Author: Vladislav Mikheda (xmikhe00)</h3>
+                <span class="copirate"><i class="fa fa-copyright"></i></span>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Projekt IIS</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.6">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s3 {text-decoration: underline ; font-kerning: none}
+    span.s4 {-webkit-text-stroke: 0px #000000}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 44.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #000000 #000000 #000000 #000000; padding: 3.6px 6.0px 3.6px 6.0px}
+    td.td2 {width: 67.3px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #000000 #000000 #000000 #000000; padding: 3.6px 6.0px 3.6px 6.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Chytré město</b></span></h1>
+<p class="p2"><span class="s1"><b>Autoři</b></span></p>
+<p class="p2"><span class="s1">Vladislav Mikheda <a href="mailto:xautor01@stud.fit.vutbr.cz"><span class="s2">xmikhe00@stud.fit.vutbr.cz</span></a> - Vytváření diagramů, implementace databáze, implementace funkcionality obyčejného uživatele, pomoc při implementaci problému, založení a vedení účtu, vedoucí týmu, zprovoznění hostingu.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">Vladislav Khrisanov <a href="mailto:xautor02@stud.fit.vutbr.cz"><span class="s2">xkhris00@stud.fit.vutbr.cz</span></a> - Vytváření diagramů, implementace funkcionality servisního techniku a správce města, dokumentace.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">Kirill Mikhailov <a href="mailto:xautor03@stud.fit.vutbr.cz"><span class="s2">xmikha00@stud.fit.vutbr.cz</span></a> - Vytváření diagramů, implementace funkcionality správce města a administrátoru.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><b>URL aplikace</b></span></p>
+<p class="p3"><span class="s3"><a href="http://34.78.161.245/login">http://34.78.161.245/login</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Uživatelé systému pro testování</b></span></h2>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1"><b>Login</b></span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1"><b>Heslo</b></span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2"><span class="s1"><b>Role</b></span></p>
+      </td>
+    </tr>
+     <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">user@user.cz</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">123</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2"><span class="s1">Obyvatel</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">admin@admin.cz</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">123</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2"><span class="s1">Administrátor</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">manager@manager.cz</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">123</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2"><span class="s1">Správce města</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">tech@tech.cz</span></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1">123</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p2"><span class="s1">Servisní technik</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="./UseCase.png"><img src="./UseCase.png"
+  width="300" height="400" alt="Diagram případů užití"></a>
+<p class="p5"><span class="s1"><p class="p2"><span class="s1"><a href="https://drive.google.com/file/d/1j_6OysT66eQplVOax-EKWfAYZ6uYYZiS/view?usp=share_link">Diagram případů užití</a></span></p></span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Video</b></span></h3>
+<p class="p5"><span class="s1"><a href="https://drive.google.com/file/d/12eRNVgCnM-HO1CP3ROyFaXyu642WAlwz/view?usp=share_link">Video</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Implementace</b></span></h2>
+<p class="p5"><span class="s1"><strong>*name jednoznačně identifikuje příslušnou složku v rámci zadání, například:</strong>
+</span></p>
+<ul class="ul1">
+  <li class="li2"><span class="s4"></span><span class="s1">Requirements - servisní požadavky
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">Manager - správce města
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">Ticket - hlášení
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">Technicians/repairs - servisní technici
+  </span></li>
+</ul>
+<ol class="ul1">
+  <li class="li2"><span class="s4"></span><span class="s1">app/Http/Controllers<b>/</b>{name} - hlavní řídicí kód
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">app/Http/Middleware<b>/</b>{name}
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">app/Services<b>/</b>{name} - některé doplňkové funkce
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">resources/views<b>/</b>{name} - frontend
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">app/Http/Requests<b>/</b>{name} - žádosti
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">app/Models<b>/</b>{name} - modely a některé příslušné doplňkové funkce
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">database/migrations<b>/</b>{name} - vytvoření tabulek v databázi
+  </span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">routes/web.php - popis cest
+  </span></li>
+</ol> 
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Databáze</b></span></h3>
+<p><a href="./DB.png"><img src="./DB.png" width="300" height="400" alt="Grafické schéma relační databáze"></a>
+<p class="p2"><span class="s1"><a href="https://drive.google.com/file/d/1ajCETNspg1jhSaR1wTln2j29nHLZm8Zt/view?usp=share_link">Grafické schéma relační databáze</a></span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Instalace</b></span></h2>
+<p class="p2"><span class="s1">Stručný popis:</span></p>
+<ul class="ul1">
+  <li class="li2"><span class="s4"></span><span class="s1">softwarové požadavky: PHP 8, Laravel 9, Composer, MariaDB</span></li>
+  <li class="li2"><span class="s4"></span><span class="s1">Založení databázi a instalace:
+    <ol>
+    <li>Založit databázi pomocí MariaDB(nebo použít jinou databázi)</li>
+    <li>Vytvořit Laravel projekt a přidat potřebné soubory</li>
+    <li>Specifikovat databází v souboru .env</li>
+    <li>Pouštět composer install</li>
+    <li>Pouštět php artisan migrate</li>
+    <li>Pouštět nmp install</li>
+    <li>Pouštět nmp run build</li>
+    <li>Pouštět nmp run dev</li>
+    <li>Pouštět php artisan storage:link</li>
+    <li>Pouštět php artisan serve</li>
+    </ol> 
+  </span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Známé problémy</b></span></h2>
+<p class="p5"><span class="s1">V době odevzdanÍ nebyly nalezeny žádné problémy.</span></p>
+</body>
+</html>
